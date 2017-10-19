@@ -1,0 +1,129 @@
+@import "base.css";
+main{
+    width: 100%;
+    height: 1020px;
+    background: #ECEEF1;
+}
+.main-bar{
+    width: 100%;
+    height: 80px;
+    background: #0096FF;
+}
+.bar{
+    width: 1240px;
+    height: 100%;
+    margin: 0 auto;
+}
+.bar > .logo{
+    width: 80px;
+    height: 100%;
+    float: left;
+}
+.bar > .bar-name{
+    float: left;
+    height: 100%;
+    padding: 13px 0;
+}
+.name-company{
+    width: 100%;
+    height: 24px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+}
+.name-company > a{
+    color: #80cbff;
+}
+.name-phone{
+    font-size: 18px;
+    color: #fff;
+    width: 100%;
+    height: 30px;
+}
+.bar > .bar-right{
+    width: 160px;
+    height: 100%;
+    float: right;
+}
+.bar-right > span{
+    float: left;
+    display: block;
+    font-size: 30px;
+    color: white;
+    width: 80px;
+    text-align: center;
+    line-height: 80px;
+    height: 100%;
+}
+.main-body{
+    width: 1240px;
+    height: 875px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.play{
+    width: 300px;
+    height: 510px;
+    background: white;
+}
+.tab{
+    width: 920px;
+    height: 510px;
+    background: white;
+}
+.comment{
+    width: 100%;
+    height: 344px;
+    background: white;
+}
+
+
+
+
+
+
+
+footer{
+    width: 1120px;
+    height: 239px;
+    margin: 0 auto;
+    position: relative;
+}
+.erd{
+    width: 315px;
+    height: 200px;
+    margin: 50px auto;
+}
+.erd>div{
+    width: 105px;
+    height: 100%;
+}
+.wx{
+    float: left;
+}
+.app{
+    float: right;
+}
+.eimg{
+    width: 105px;
+    height: 105px;
+    margin-top: 40px;
+}
+.erd p{
+    font-size: 18px;
+    color: #bbb;
+}
+.copyr{
+    width: 1120px;
+    height: 33px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -560px;
+    text-align: center;
+    line-height: 33px;
+    color: #aaaaaa;
+}

@@ -1,0 +1,240 @@
+@import url('base.css');
+main{
+    width: 1120px;
+    margin: 40px auto;
+    overflow: auto;
+}
+.main-left{
+    width: 280px;
+    height: 943px;
+    float: left;
+}
+.main-left>h3{
+    width: 100%;
+    height: 43px;
+    font-size: 16px;
+    color: #0091ff;
+    line-height: 42px;
+    text-align: left;
+    cursor: pointer;
+    margin: 0;
+    font-weight: 700;
+    border-bottom: 1px solid #eceef1;
+}
+.main-left .choose-label{
+    width: 100%;
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.choose-label span{
+    display: block;
+    height: 32px;
+    float: left;
+    border-radius: 16px;
+    border: 1px solid #dddddd;
+    line-height: 32px;
+    padding: 0 10px;
+    margin-right: 10px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+.first{
+    background: #0091ff;
+    color: #ffffff;
+}
+.choose-label ul{
+    width: 100%;
+    display: none;
+}
+.choose-label .all{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #0091ff;
+    font-size: 12px;
+    background: #ffffff;
+    cursor: pointer;
+}
+.choose-label .slidup{
+    width: 100%;
+    height: 30px;
+    float: left;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    color: #0091ff;
+    font-size: 12px;
+    background: #ffffff;
+}
+.brand{
+    width: 100%;
+}
+.fir{
+    height: 260px;
+    overflow: auto;
+}
+.oth{
+    display: none;
+}
+.brand span{
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+}
+.brand:first-child span:first-child{
+    color: #0091ff;
+}
+.main-left h3>span{
+    float: right;
+    font-size: 30px;
+    color: #bbbbbb;
+    font-weight: 100;
+}
+.main-right{
+    width: 820px;
+    min-height: 1000px;
+    float: right;
+}
+.top-tabel{
+    width: 100%;
+    height: 52px;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+}
+.top-tabel>ul{
+    float: left;
+}
+.top-tabel>ul>li{
+    width: 140px;
+    height: 50px;
+    border-right: 1px solid #dddddd;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+}
+.top-tabel>span{
+    float: right;
+    line-height: 50px;
+    padding-right: 20px;
+}
+.top-tabel>span>span{
+    color: #0091ff;
+}
+.phone-list{
+    width: 100%;
+}
+.phone-list>ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.phone-list>ul>li{
+    width: 260px;
+    height: 270px;
+    margin-bottom: 20px;
+}
+.phone-img{
+    width: 260px;
+    height: 200px;
+    border: 1px solid #dddddd;
+    position: relative;
+}
+.phone-img:hover{
+    border: 1px solid #0091ff;
+}
+.phone-img .join{
+    width: 70px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 20px;
+    display: none;
+    top: 9px;
+    right: 9px;
+    font-size: 12px;
+    color: #fff;
+    background: #0091ff;
+    z-index: 10;
+}
+.phone-img:hover .join{
+    display: block;
+}
+.phone-img img{
+    width: 143px;
+    height: 198px;
+    background-color: #000;
+    margin-left: 58px;
+}
+.phone-info{
+    display: block;
+    width: 260px;
+    height: 70px;
+    text-align: center;
+}
+.phone-info:hover{
+    text-decoration: none;
+}
+.phone-info h3{
+    width: 100%;
+    font-size: 18px;
+    line-height: 18px;
+    color: #31343b;
+    margin: 21px 0 10px;
+}
+.phone-info p{
+    width: 100%;
+    line-height: 12px;
+    font-size: 12px;
+    color: #abb0bc;
+}
+footer{
+    width: 1120px;
+    height: 239px;
+    margin: 40px auto;
+    position: relative;
+}
+.erd{
+    width: 315px;
+    height: 200px;
+    margin: 50px auto;
+}
+.erd>div{
+    width: 105px;
+    height: 100%;
+}
+.wx{
+    float: left;
+}
+.app{
+    float: right;
+}
+.eimg{
+    width: 105px;
+    height: 105px;
+    margin-top: 40px;
+}
+.erd p{
+    font-size: 18px;
+    color: #bbb;
+}
+.copyr{
+    width: 1120px;
+    height: 33px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -560px;
+    text-align: center;
+    line-height: 33px;
+    color: #aaaaaa;
+}

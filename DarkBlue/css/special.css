@@ -1,0 +1,161 @@
+@import url('base.css');
+main{
+    width: 100%;
+    background: #ECEEF1;
+}
+main>ul{
+    width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+main>ul>li{
+    width: 360px;
+    height: 342px;
+    background: #ffffff;
+    margin-bottom: 20px;
+}
+main>ul>li>a:hover{
+    text-decoration: none;
+}
+main>ul>li:first-child{
+    width: 740px;
+    position: relative;
+    background: url("../image/sansungnote7.png") no-repeat center center;
+}
+main>ul>li:nth-child(9){
+    width: 1120px;
+    height: 80px;
+    color: #ffffff;
+    background: url("../image/middle-title.png") no-repeat center bottom;
+}
+.suggest{
+    float: left;
+    line-height: 80px;
+    font-size: 20px;
+    margin-left: 40px;
+
+}
+.suggest-btn{
+    width: 98px;
+    height: 38px;
+    border: 1px solid #fff;
+    text-align: center;
+    line-height: 38px;
+    float: right;
+    font-size: 16px;
+    margin: 20px 39px 0 0;
+    cursor: pointer;
+}
+.suggest-btn:hover{
+    color: #888888;
+    background: #ffffff;
+}
+.article{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(0,0,0,0.7);
+}
+.article span{
+    color: #fff;
+    padding-left: 30px;
+    font-size: 20px;
+    line-height: 80px;
+}
+.artic-img{
+    width: 360px;
+    height: 166px;
+}
+.artic-bg{
+    width: 360px;
+    height: 176px;
+    padding: 20px;
+    position: relative;
+}
+.artic-bg>span{
+    display: block;
+}
+.bg-type{
+    font-size: 14px;
+    line-height: 14px;
+    color: #6a71e5;
+    margin-bottom: 15px;
+}
+.bg-title{
+    width: 100%;
+    color: #31343b;
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 7px;
+}
+.bg-abstract{
+    width: 100%;
+    height: 56px;
+    font-size: 14px;
+    color: #abb0bc;
+    line-height: 28px;
+}
+.bg-time{
+    height: 14px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #abb0bc;
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+}
+.bg-like{
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+    color: #abb0bc;
+    padding-left: 19px;
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
+}
+footer{
+    width: 1120px;
+    height: 239px;
+    margin: 40px auto;
+    position: relative;
+}
+.erd{
+    width: 315px;
+    height: 200px;
+    margin: 50px auto;
+}
+.erd>div{
+    width: 105px;
+    height: 100%;
+}
+.wx{
+    float: left;
+}
+.app{
+    float: right;
+}
+.eimg{
+    width: 105px;
+    height: 105px;
+    margin-top: 40px;
+}
+.erd p{
+    font-size: 18px;
+    color: #bbb;
+}
+.copyr{
+    width: 1120px;
+    height: 33px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -560px;
+    text-align: center;
+    line-height: 33px;
+    color: #aaaaaa;
+}

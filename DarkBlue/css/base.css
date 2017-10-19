@@ -1,0 +1,128 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+}
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+header{
+    width: 1349px;
+    height: 60px;
+    background: #000;
+}
+.header-inner{
+    width: 1120px;
+    height: 100%;
+    margin:0 auto;
+    background: #000;
+}
+.inner-logo{
+    width: 185px;
+    height: 100%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    color: white;
+    float: left;
+}
+.inner-nav{
+    width: 500px;
+    height: 100%;
+    float: left;
+}
+.inner-nav ul li{
+    line-height: 60px;
+    float: left;
+}
+.inner-nav ul li a{
+    padding: 0 15px;
+    display: block;
+    height: 60px;
+    color: #fff;
+    font-size: 14px;
+    border:3px solid #000;
+}
+
+.inner-search{
+    width: 220px;
+    height: 30px;
+    border-radius: 15px;
+    background: #333333;
+    float: right;
+    margin-top: 15px;
+    margin-right: 100px;
+    padding: 5px 15px;
+}
+.inner-search input{
+    border: none;
+    background: #333333;
+}
+.inner-search input:focus{
+    border: none;
+}
+.inner-search i{
+    float: right;
+    color: #ffffff;
+    font-weight: 200;
+    cursor: pointer;
+}
+.login{
+    float: right;
+}
+.login ul li{
+    float: left;
+    padding-right: 10px;
+}
+.login ul li a{
+    display: block;
+    height: 60px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 60px;
+}
+footer{
+    width: 1120px;
+    height: 239px;
+    margin: 0 auto;
+    position: relative;
+}
+.erd{
+    width: 315px;
+    height: 200px;
+    margin: 50px auto;
+}
+.erd>div{
+    width: 105px;
+    height: 100%;
+}
+.wx{
+    float: left;
+}
+.app{
+    float: right;
+}
+.eimg{
+    width: 105px;
+    height: 105px;
+    margin-top: 40px;
+}
+.erd p{
+    font-size: 18px;
+    color: #bbb;
+}
+.copyr{
+    width: 1120px;
+    height: 33px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -560px;
+    text-align: center;
+    line-height: 33px;
+    color: #aaaaaa;
+}
