@@ -13,6 +13,6 @@ $(function () {
         }else {
             $('span',this).text('+');
         }
-        $(this).next('.oth').slideToggle();
+        $(this).next().slideToggle();
     });
 });
