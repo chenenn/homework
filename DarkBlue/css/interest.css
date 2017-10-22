@@ -1,0 +1,170 @@
+@import "base.css";
+main{
+    width: 100%;
+    background: #ECEEF1;
+    overflow: hidden;
+}
+.content{
+    width: 1120px;
+    margin: 20px auto;
+    position: relative;
+}
+.title{
+    width: 100%;
+    height: 520px;
+}
+.title > h2{
+    width: 100%;
+    text-align: center;
+    line-height: 520px;
+    font-size: 48px;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+.text{
+    width: 100%;
+    margin-top: 20px;
+    background: white;
+}
+.text > .cate{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #eceef1;
+    padding: 0 50px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+.cate > span > a{
+    color: #0096ff;
+}
+.text > .coverage{
+    width: 100%;
+    padding: 0 50px;
+}
+.coverage{
+    font-size: 18px;
+    color: #333;
+    line-height: 1.7;
+}
+.coverage > span{
+    display: block;
+    margin-bottom: 26px;
+}
+.coverage > img{
+    display: block;
+    margin: 0 auto;
+    width: 690px;
+    height: 400px;
+}
+.coverage > .share{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.share > span{
+    display: block;
+    width: 80px;
+    height: 80px;
+    font-size: 36px;
+    line-height: 80px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.share > span:nth-child(1){
+    border: 1px solid #13B11D;
+    color: #13B11D;
+}
+.share > span:nth-child(2){
+    border: 1px solid #FFB41F;
+    color: #FFB41F;
+    margin: 0 20px;
+}
+.share > span:nth-child(3){
+    border: 1px solid #EB2324;
+    color: #EB2324;
+    font-size: 46px;
+}
+.rolate-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rolate-title > span{
+    display: block;
+    width: 470px;
+    height: 1px;
+    background: #dddddd;
+}
+.rolate-title > p{
+    width: 80px;
+    font-size: 14px;
+    text-align: center;
+    color: #bbbbbb;
+}
+.rolate-list{
+    padding-top: 20px;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+.rolate-list > a{
+    font-size: 16px;
+    color: #bbbbbb;
+}
+
+
+
+
+
+
+footer{
+    width: 1120px;
+    height: 239px;
+    margin: 0 auto;
+    position: relative;
+}
+.erd{
+    width: 315px;
+    height: 200px;
+    margin: 50px auto;
+}
+.erd>div{
+    width: 105px;
+    height: 100%;
+}
+.wx{
+    float: left;
+}
+.app{
+    float: right;
+}
+.eimg{
+    width: 105px;
+    height: 105px;
+    margin-top: 40px;
+}
+.erd p{
+    font-size: 18px;
+    color: #bbb;
+}
+.copyr {
+    width: 1120px;
+    height: 33px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -560px;
+    text-align: center;
+    line-height: 33px;
+    color: #aaaaaa;
+}

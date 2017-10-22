@@ -15,4 +15,12 @@ $(function () {
         }
         $(this).next().slideToggle();
     });
+    console.log($('.main-right > span'));
+    $('.main-right > span').on('click',function () {
+        for(let i=0;i<6;i++){
+            let phone = $('.phone-list > ul > li').first().clone();
+            //console.log(phone);
+            $('.phone-list > ul').append(phone);
+        }
+    })
 });

@@ -64,40 +64,6 @@
 }
 
 
-.vs{
-    width: 1120px;
-    margin:30px auto;
-}
-.vs>a{
-    font-size: 24px;
-    font-weight: 400;
-    color: #000000;
-}
-.vs>a:hover{
-    text-decoration: none;
-}
-.vs-main>ul{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.vs-main ul li{
-    width: 550px;
-    height: 225px;
-    margin-top: 10px;
-}
-.vs-main ul li a{
-    display: block;
-    width: 550px;
-    height: 225px;
-}
-.vs-main ul li a:hover{
-    -ms-filter: brightness(1.1)contrast(110%);
-    filter: brightness(1.1)contrast(110%);
-
-}
 
 .secret{
     width: 1120px;

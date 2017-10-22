@@ -101,6 +101,20 @@ main{
     width: 820px;
     min-height: 1000px;
     float: right;
+    position: relative;
+}
+.main-right > span{
+    display: block;
+    font-size: 18px;
+    color: #bbbbbb;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
 }
 .top-tabel{
     width: 100%;
@@ -129,6 +143,7 @@ main{
 }
 .phone-list{
     width: 100%;
+    margin-bottom: 40px;
 }
 .phone-list>ul{
     width: 100%;

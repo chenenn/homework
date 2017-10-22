@@ -14,11 +14,14 @@ header{
     grid-template-columns: 1fr 240px 1fr;
 }
 header > .title{
+    display: block;
     height: 100%;
     text-align: center;
     line-height: 64px;
     font-size: 40px;
     font-weight: 600;
+    text-decoration: none;
+    color: black;
 }
 header > .line{
     height: 1px;
