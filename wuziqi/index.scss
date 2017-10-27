@@ -1,0 +1,93 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	list-style: none;
+}
+@mixin center{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+}
+@mixin circle{
+	border-radius: 50%;
+}
+.heng{
+	display: block;
+	width: 570px;
+	height: 1px;
+	position: absolute;
+	background: black;
+	opacity: 0;
+}
+.shu{
+	display: block;
+	width: 1px;
+	height: 570px;
+	position: absolute;
+	background: black;
+	opacity: 0;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.box{
+	width: 600px;
+	height: 600px;
+	background: #ea901d;
+	@include center;
+	.hei{
+		background: black;
+	}
+	.bai{
+		background: white;
+	}
+}
+.qizi{
+	width: 24px;
+	height: 24px;
+	margin: 3px;
+	float: left;
+	position: relative;
+	z-index: 9;
+	@include circle;
+}
+@for $i from 1 through 20{
+	.box > span:nth-of-type(#{$i}){
+		top:#{($i - 1) * 30 + 15}px;
+		left: 15px;
+		animation:shupu .5s forwards;
+		animation-delay: #{$i * 0.05}s;
+	}
+	.box > i:nth-of-type(#{$i}){
+		left: #{($i - 1) * 30 + 15}px;
+		top: 15px;
+		animation:hengpu .5s forwards;
+		animation-delay: #{$i * 0.05 + 1}s;
+	}
+}
+@keyframes hengpu {
+	0%{
+		opacity: 0;
+		transform: translate3d(0,0,1000px);
+	}
+	100%{
+		opacity: 1;
+		transform: translate3d(0,0,0);
+	}
+}
+@keyframes shupu {
+	0%{
+		opacity: 0;
+		transform: translate3d(0,0,1000px);
+	}
+	100%{
+		opacity: 1;
+		transform: translate3d(0,0,0);
+	}
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+
+<body>
+    <main>
+        <h3>wuif1707-1班级信息</h3>
+        <table>
+            <thead>
+            <tr>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>籍贯</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <button class="addbtn">添加</button>
+    </main>
+    <script>
+
+        class storage {
+            constructor(){
+            this.date = [];
+        }
+            getDate() {
+                this.date = JSON.parse(localStorage.getItem('students'));
+                if(!this.date) {
+                    this.date = [
+                            {name:'zhangsan',sex:'男',age:18,address:'shanxi'}
+                        ];
+                        localStorage.setItem('students',JSON.stringify(this.date));
+                }
+                return this.date;
+            }
+            upDate(element) {
+              let index = element.parentNode.id;
+              let type = element.getAttribute('type');
+              let value = element.innerText;
+              this.date[index][type] = value;
+              this.saveDate();
+            }
+            addDate(){
+                this.date.push({name:'',sex:'',age : '',address:''});
+                this.saveDate();
+            }
+            delDate(index){
+                this.date.splice(index,1);
+                this.saveDate();
+            }
+            saveDate(){
+                localStorage.students = JSON.stringify(this.date);
+            }
+
+        }
+        let storages = new storage();
+        let students = storages.getDate();
+
+        /*localStorage.setItem('students',JSON.stringify(students));
+        let aa = JSON.parse(localStorage.getItem('student'));
+        console.log(aa);*/
+        let tables = document.querySelector('table');
+        let addbtn = document.querySelector('.addbtn');
+        let tbody = document.querySelector('tbody');
+        students.forEach((value,index)=>{
+            let trs = document.createElement('tr');
+            trs.id = index;
+            trs.innerHTML = `
+            <td type="name">${value.name}</td>
+            <td type="sex">${value.sex}</td>
+            <td type="age">${value.age}</td>
+            <td type="address">${value.address}</td>
+            <td class="del"><button>删除</button></td>
+            `;
+            tbody.appendChild(trs);
+        })
+        tables.ondblclick = function(e) {
+            let element = e.target;
+            if(element.nodeName == 'TD' && element.className != 'del') {
+            let inputs = document.createElement('input');
+            let oldv = element.innerText;
+            inputs.value = oldv;
+            element.innerText = '';
+            element.appendChild(inputs);
+            inputs.onblur = function() {
+                let newv = this.value.trim();
+                element.removeChild(inputs);
+                inputs = null;
+                element.innerText = newv;
+                storages.upDate(element);
+            }
+        }
+        }
+        tables.addEventListener('click',function(e){
+            let element = e.target;
+            let index = element.parentNode.parentNode.id;
+            let oldl = tbody.children.length;
+            //console.log(element.parentNode.parentNode.parentNode);
+            if(element.nodeName == 'BUTTON'){
+                tbody.removeChild(element.parentNode.parentNode);
+                storages.delDate(index);
+                let trs = tbody.children;
+                console.log(trs.length);
+                for(let i=index;i<oldl-index;i++) {
+                    trs[i]['id'] = i;
+                }
+            }
+
+        })
+        addbtn.onclick = function() {
+            let tr = document.createElement('tr');
+            tr.id = storages.getDate().length;
+            tr.innerHTML = `
+            <td type="name"></td>
+            <td type="sex"></td>
+            <td type="age"></td>
+            <td type="address"></td>
+            <td class="del"><button>删除</button></td>
+            `;
+            storages.addDate();
+            tbody.appendChild(tr);
+        }
+    </script>
+</body>
+</html>

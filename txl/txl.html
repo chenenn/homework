@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="txl.css"/>
+</head>
+<body>
+    <header>
+        <input type="text" placeholder="请输入搜索内容"/>
+    </header>
+    <main>
+
+    </main>
+    <aside>
+        <ul>
+
+        </ul>
+    </aside>
+    <script>
+        let input = document.querySelector('input');
+        let main = document.querySelector('main');
+        let aside = document.querySelector('aside');
+        let ul = document.querySelector('ul');
+        console.log(aside);
+        for(let i=0;i<26;i++) {
+            let char = String.fromCharCode(65+i);
+            ul.innerHTML += `<li>${char}</li>`;
+        }
+        let msg = [
+            {name:'郭靖',tel:'18834078212',py:'guo jin'},
+            {name:'黄蓉',tel:'18834078221',py:'huang rong'},
+            {name:'杨过',tel:'13834078212',py:'yang guo'},
+            {name:'张无忌',tel:'13634078212',py:'zhang wu ji'},
+            {name:'乔峰',tel:'15934078212',py:'qiao feng'},
+            {name:'郭襄',tel:'15934078212',py:'guo xiang'},
+            {name:'风清扬',tel:'18834078212',py:'feng qing yang'},
+            {name:'令狐聪',tel:'18234078212',py:'ling hu chong'},
+            {name:'郭靖',tel:'18834078212',py:'guo jin'},
+            {name:'黄蓉',tel:'18834078221',py:'huang rong'},
+            {name:'杨过',tel:'13834078212',py:'yang guo'},
+            {name:'张无忌',tel:'13634078212',py:'zhang wu ji'},
+            {name:'乔峰',tel:'15934078212',py:'qiao feng'},
+            {name:'郭襄',tel:'15934078212',py:'guo xiang'},
+            {name:'风清扬',tel:'18834078212',py:'feng qing yang'},
+            {name:'令狐聪',tel:'18234078212',py:'ling hu chong'},
+            {name:'郭靖',tel:'18834078212',py:'guo jin'},
+            {name:'郭靖',tel:'18834078212',py:'guo jin'},
+            {name:'黄蓉',tel:'18834078221',py:'huang rong'},
+            {name:'杨过',tel:'13834078212',py:'yang guo'},
+            {name:'张无忌',tel:'13634078212',py:'zhang wu ji'},
+            {name:'乔峰',tel:'15934078212',py:'qiao feng'},
+            {name:'郭襄',tel:'15934078212',py:'guo xiang'},
+            {name:'风清扬',tel:'18834078212',py:'feng qing yang'},
+            {name:'令狐聪',tel:'18234078212',py:'ling hu chong'},
+            {name:'黄蓉',tel:'18834078221',py:'huang rong'},
+            {name:'杨过',tel:'13834078212',py:'yang guo'},
+            {name:'张无忌',tel:'13634078212',py:'zhang wu ji'},
+            {name:'乔峰',tel:'15934078212',py:'qiao feng'},
+            {name:'郭襄',tel:'15934078212',py:'guo xiang'},
+            {name:'风清扬',tel:'18834078212',py:'feng qing yang'},
+            {name:'令狐聪',tel:'18234078212',py:'ling hu chong'},
+            {name:'洪七公',tel:'18735078212',py:'hong qi gong'}
+        ];
+        rander = function(msgs) {
+        let newmsg = [];
+            main.innerHTML = '';
+        msgs.forEach(value=>{
+            let first = value['py'].charAt(0).toUpperCase();
+            if(!newmsg[first]) {
+                newmsg[first] = [];
+            }
+            newmsg[first].push(value);
+        })
+        let chars = Object.keys(newmsg).sort();
+        //console.log(chars);
+        chars.forEach(fchar=>{
+            let dl = document.createElement('dl');
+            dl.innerHTML = `
+                <dt>${fchar}</dt>
+            `
+            //console.log(newmsg[fchar]);
+            newmsg[fchar].forEach(value1=>{
+                dl.innerHTML += `<dd><a href="tel:${value1['tel']}">${value1['name']}</a></dd>`;
+            })
+            main.appendChild(dl);
+
+        })
+        }
+        rander(msg);
+        serach = function(msgs) {
+            input.onkeyup = function() {
+                aside.style.display = 'none';
+                let stext = input.value;
+                main.innerHTML = '';
+                msgs.forEach(value=>{
+                    if(stext.length<=1 && getFirChar(value['py']).includes(stext)) {
+                        let dd = document.createElement('dd');
+                        dd.innerHTML = `<a href="tel:${value['tel']}">${value['name']}</a>`;
+                        main.appendChild(dd);
+                    }
+                    if( (stext.length>1) && (getFirChar(value['py']).includes(stext) || value['tel'].includes(stext) || value['name'].includes(stext)
+                            || value['py'].includes(stext))) {
+                        let dd = document.createElement('dd');
+                        dd.innerHTML = `<a href="tel:${value['tel']}">${value['name']}</a>`;
+                        main.appendChild(dd);
+                    }
+                })
+                if(!stext) {
+                    rander(msg);
+                    aside.style.display = 'block';
+                }
+            }
+            getFirChar = function(str) {
+                let firchar = str.charAt(0);
+                let newarr = str.split('');
+                for(let i=0;i<newarr.length;i++) {
+                    if(newarr[i] ==' ') {
+                        firchar += newarr[i+1];
+                    }
+                }
+                return firchar;
+            }
+        }
+        serach(msg);
+        ul.addEventListener('click',function(e){
+            let btnchar = e.target.innerText;
+            let dts = document.querySelectorAll('dt');
+            for(let i=0;i<dts.length;i++) {
+                if(btnchar == dts[i].innerText) {
+                    document.body.scrollTop = dts[i].offsetTop-input.offsetHeight;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

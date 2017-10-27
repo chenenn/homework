@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="iconfont/iconfont.css"/>
+</head>
+<body>
+    <main>
+        <div class="left">
+            <ul>
+                <li id="line"><span class="iconfont icon-line"></span></li>
+                <li id="circular"><span class="iconfont icon-yuan"></span></li>
+                <li id="pencil"><span class="iconfont icon-qianbi"></span></li>
+                <li id="starlike">
+                    <span class="iconfont icon-wujiaoxing"></span>
+                    <input class="angle inputnum" type="text" placeholder="5"/>
+                </li>
+                <li id="polygon">
+                    <span class="iconfont icon-duobianxing"></span>
+                    <input class="side inputnum" type="text" placeholder="5"/>
+                </li>
+                <li id="eraser"><span class="iconfont icon-xiangpica"></span></li>
+                <li id="text">
+                    <span class="iconfont icon-ziti"></span>
+                    <input type="text" class="font inputnum" placeholder="30"/>
+                </li>
+                <li id="tailor"><span class="iconfont icon-caijian"></span></li>
+                <li id="fill"><span class="iconfont icon-tianchong"></span></li>
+                <li id="dashed"><span class="iconfont icon--xuxian"></span></li>
+                <li id="solid"><span class="iconfont icon-xiantiao"></span></li>
+                <li><input type="color" id="color"/></li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="top">
+                <div class="tailor"></div>
+                <div contenteditable="true" id="textbox"></div>
+                <canvas width="1200" height="496"></canvas>
+                <div class="ontop"></div>
+                <div class="opa"></div>
+            </div>
+            <div class="bottom">
+                <button class="revoke">撤销</button>
+                <a class="save" href="">保存</a>
+
+            </div>
+        </div>
+    </main>
+</body>
+<script src="js/index.js"></script>
+</html>
