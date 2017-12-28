@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="todolist.css">
+</head>
+<script src="../vue.js"></script>
+<body>
+<div id="app">
+	<header>
+	  <div class="form">
+	  	<label>ToDoList</label>
+		<input type="text" placeholder="添加事情" v-model="mes" @keydown.enter="addList">
+	  </div>
+	</header>
+	<main>
+		<h2>
+			正在进行<span>{{filters.todolist.length}}</span>
+		</h2>
+		<ol>
+			<li v-for="li in filters.todolist">
+				<input type="checkbox" v-model="li.type"> 
+				{{li.content}}
+				<button @click="del(li)"></button>
+			</li>
+		</ol>
+		<h2>
+			已经完成<span>{{filters.donelist.length}}</span>
+		</h2>
+		<ul>
+			<li v-for="li in filters.donelist">
+				<input type="checkbox" v-model="li.type">
+				<span>{{li.content}}</span>
+				<button @click="del(li)"></button>
+			</li>
+		</ul>
+	</main>
+</div>
+</body>
+<script>
+	let app = new Vue({
+		el:"#app",
+		data:{
+			mes:'',
+			list:[]
+		},
+		computed:{
+			filters(){
+				this.list = this.list.filter(function(value){
+					return value.content;
+				});
+				let data = {todolist:[],donelist:[]};
+				data.todolist = this.list.filter(function(value){
+					return !value.type;
+				});
+				data.donelist = this.list.filter(function(value){
+					return value.type;
+				});
+				return data;
+			}
+		},
+		methods:{
+			addList(){
+					this.list.push({type:false,content:this.mes});
+					this.mes = '';
+			},
+			del(li){
+				li.content = '';
+			}
+		},
+		mounted(){
+			this.list = JSON.parse(localStorage.list);
+		}
+	});
+	app.$watch('list',function(){localStorage.list = JSON.stringify(this.list);},{deep:true})
+</script>
+</html>

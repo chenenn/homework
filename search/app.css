@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+#app{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.search-box{
+    width: 300px;
+    height: 50px;
+    position: relative;
+}
+.search{
+    width: 100%;
+    height: 100%;
+}
+.search > input{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border:none;
+    outline: none;
+    border: 1px solid #8c8c8c;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right:20px;
+}
+.comment{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top:100%;
+    left: 0;
+}
+.comment > ul{
+    width: 100%;
+    height: auto;
+    padding-left:20px;
+    padding-right: 20px;
+}
+.comment > ul > li{
+    width: 100%;
+    height: 40px;
+    line-height:40px;
+    border-bottom:1px solid #3c3c3c;
+    cursor: pointer;
+}
